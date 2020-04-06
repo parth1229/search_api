@@ -13,4 +13,4 @@ phases:
       - docker push akash80e/tourist_app:search_api
 artifacts:
   files:
-    - search.py
+    - Dockerrun.aws.json
