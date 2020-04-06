@@ -10,6 +10,7 @@ phases:
       - echo Building the Docker image...
       - docker build -t search_api:latest .
       - docker tag search_api:latest akash80e/tourist_app:search_api
+      - docker pull akash80e/tourist_app:search_api
   post_build:
     commands:
       - echo Build completed on `date`
