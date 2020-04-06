@@ -6,10 +6,6 @@ phases:
       - docker login -u akash80e -p group1220@
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - echo Build started on `date`
-      - echo pulling the Docker image...
       - docker pull akash80e/tourist_app:search_api
       - docker build -t search_api:latest .
       - docker tag search_api:latest akash80e/tourist_app:search_api
