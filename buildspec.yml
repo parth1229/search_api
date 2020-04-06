@@ -6,13 +6,10 @@ phases:
       - docker login -u akash80e -p group1220@
   build:
     commands:
-      - docker pull akash80e/tourist_app:search_api
-      - docker build -t search_api:latest .
+      - docker build -f Dockerfile -t search_api:latest .
       - docker tag search_api:latest akash80e/tourist_app:search_api
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker images...
       - docker push akash80e/tourist_app:search_api
 artifacts:
   files:
