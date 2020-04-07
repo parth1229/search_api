@@ -5,7 +5,6 @@
             "name": "search",
             "essential": true,
             "image": "akash80e/back_up:search_api",
-            "name": "search",
             "memory": 300,
             "portMappings": [
                 {
@@ -25,11 +24,22 @@
                 }
             ],
             "memory": 300,
-            "name": "ticket",
             "portMappings": [
                 {
                     "containerPort": 5001,
                     "hostPort": 5001
+                }
+            ]
+        },
+        {
+            "name": "signin",
+            "essential": true,
+            "image": "akash80e/back_up:signin_api",
+            "memory": 300,
+            "portMappings": [
+                {
+                    "containerPort": 5002,
+                    "hostPort": 5002
                 }
             ]
         },
@@ -43,8 +53,7 @@
                     "sourceVolume": "_Web-Client"
                 }
             ],
-            "memory": 300,
-            "name": "web",
+            "memory": 500,
             "portMappings": [
                 {
                     "containerPort": 3000,
